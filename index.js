@@ -8,10 +8,15 @@ const postRoutes = require("./routes/postRoutes");
 
 const app = express();
 
-const corsOptions = {
-  origin: "*",  
-  credentials: true,                
-};
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://blog-api-self-gamma.vercel.app/"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(cors(corsOptions)); 
