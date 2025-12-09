@@ -14,12 +14,10 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true
+  origin: allowedOrigins
 }));
 
 app.use(express.json());
-app.use(cors(corsOptions)); 
 
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
