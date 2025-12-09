@@ -10,7 +10,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://blog-api-self-gamma.vercel.app/"
+  "https://blog-api-self-gamma.vercel.app"
 ];
 
 app.use(cors({
